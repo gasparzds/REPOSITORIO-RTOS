@@ -1,0 +1,13 @@
+Usar um RTOS em aplicações IoT traz benefícios como execução simultânea de tarefas, priorização, sincronização, 
+uso eficiente de recursos, tolerância a falhas e facilidade de desenvolvimento. Essas vantagens contribuem para 
+um sistema IoT mais eficiente, confiável e fácil de gerenciar.
+           *Execução simultânea de tarefas: Com um RTOS, diferentes partes do sistema IoT podem ser executadas ao
+            mesmo tempo. Isso torna o sistema mais eficiente e responsivo.
+           *Priorização de tarefas: O RTOS permite que tarefas críticas tenham prioridade sobre as menos importantes. 
+            Isso garante que as tarefas essenciais sejam concluídas a tempo, melhorando a confiabilidade do sistema.
+           *Sincronização e comunicação entre tarefas: O RTOS oferece recursos para sincronizar e compartilhar dados 
+            entre tarefas. Isso é útil quando diferentes partes do sistema precisam trabalhar juntas ou compartilhar recursos.
+           *Facilidade de desenvolvimento e manutenção: O uso de um RTOS simplifica o desenvolvimento e a manutenção das aplicações 
+            IoT. Ele fornece uma estrutura padronizada e facilita a adição e atualização de funcionalidades.
+
+
