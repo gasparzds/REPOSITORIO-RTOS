@@ -46,5 +46,58 @@ xTaskCreate(//Nesse bloco, a função xTaskCreate() é usada para criar a tarefa
   NULL, //É o parâmetro da tarefa (nesse caso, não é utilizado).
   6,  //É a prioridade da tarefa (números maiores indicam prioridades mais altas).
   NULL); //É o identificador da tarefa (nesse caso, não é utilizado).
+  
+ 4º PARTE - DESCRITIVO
+ void loop() {}
+void TaskReadTemperature(void *pvParameters) { //Declaração da função TaskReadTemperature que recebe um ponteiro void como parâmetro.
+  (void) pvParameters;
+  float sensorValue = 0.0; //Declaração e inicialização da variável sensorValue como um número de ponto flutuante com valor inicial 0.0.
+  for (;;) { //Início de um loop infinito.
+    sensorValue = -10.0 + (rand() % 51); //Geração de um número aleatório entre -10 e 40 para simular a leitura de um sensor de temperatura.
+    temperature = sensorValue; //Atribuição do valor de sensorValue à variável global temperature.
+    vTaskDelay(2000 / portTICK_PERIOD_MS); //Atraso de 2 segundos usando a função vTaskDelay() do FreeRTOS.
+    
+    lcd.setCursor(0,0); //Define a posição do cursor do display LCD para a primeira coluna e primeira linha.
+    lcd.print("Temp: "); //Imprime o texto "Temp: " no display LCD.
+    lcd.print(temperature); //Imprime o valor da temperatura no display LCD.
+    lcd.print(" C"); //Imprime a unidade de temperatura ("C") no display LCD.
+  }
+}
+  
+  
+5º PARTE - DESCRITIVO
+  void TaskBlink2(void *pvParameters){ //Declaração da função TaskBlink2 que recebe um ponteiro void como parâmetro.
+  (void) pvParameters; //Ignora o parâmetro pvParameters e evita um aviso de variável não utilizada.
+  for (;;){ //Início de um loop infinito.
+    if (temperature == Valor_para_acender) { //Verifica se o valor da variável temperature é igual ao valor de Valor_para_acender. 
+          digitalWrite(LED_PIN_2, HIGH); //Se for igual, acende o LED no pino LED_PIN_2
+        } else {
+          digitalWrite(LED_PIN_2, LOW); //caso contrário, apaga o LED.
+        }
+        vTaskDelay(3000 / portTICK_PERIOD_MS); //Aguarda um atraso de 3 segundos usando a função vTaskDelay() do FreeRTOS.
+  }
+}
+    void TaskBlink3(void *pvParameters){ //Declaração da função TaskBlink3 que recebe um ponteiro void como parâmetro.
+  (void) pvParameters; //Ignora o parâmetro pvParameters e evita um aviso de variável não utilizada.
+  for (;;){ //Início de um loop infinito.
+    digitalWrite(LED_PIN_3, HIGH); //Define o pino LED_PIN_3 como HIGH, acendendo o LED conectado a esse pino.
+    vTaskDelay(500 / portTICK_PERIOD_MS); //Aguarda um atraso de 500 milissegundos usando a função vTaskDelay() do FreeRTOS.
+    digitalWrite(LED_PIN_3, LOW); //Define o pino LED_PIN_3 como LOW, apagando o LED conectado a esse pino.
+    vTaskDelay(500 / portTICK_PERIOD_MS); //Aguarda um atraso de 500 milissegundos usando a função vTaskDelay() do FreeRTOS.
+  }
+} //Fim do loop infinito.
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 
