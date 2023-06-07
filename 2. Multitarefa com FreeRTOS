@@ -1,0 +1,11 @@
+O FreeRTOS é um dos sistemas operacionais em tempo real mais populares e amplamente utilizados para o desenvolvimento de
+sistemas embarcados. Ele oferece suporte a multitarefa preemptiva, permitindo que várias tarefas sejam executadas de forma
+concorrente e eficiente. Cada tarefa possui sua própria pilha e contexto, permitindo que elas sejam executadas de forma
+isolada e com prioridades distintas. 
+Além da prioridade, você também pode definir outras características para cada tarefa, como seu tamanho de pilha e seu
+período de execução. Esses atributos ajudam a ajustar o comportamento do sistema de acordo com os requisitos do seu aplicativo.
+Para sincronizar e compartilhar recursos entre as tarefas, o FreeRTOS oferece uma variedade de mecanismos, como semáforos, 
+filas, mutexes e eventos. Esses recursos facilitam a comunicação entre as tarefas e garantem a integridade dos dados compartilhados.
+Em resumo, o FreeRTOS é uma excelente opção para o desenvolvimento de sistemas embarcados que exigem multitarefa em tempo real.
+Com sua facilidade de uso, recursos de sincronização e portabilidade, o FreeRTOS permite que você crie aplicativos robustos e eficientes,
+garantindo uma execução confiável das tarefas em seu sistema embarcado.
