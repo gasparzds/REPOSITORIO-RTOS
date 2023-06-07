@@ -1,1 +1,17 @@
+POR QUE UTILIZAR SINCRONIZAÇÃO DE TAREFAS EM UM AMBIENTE DE PRODUÇÃO
+Em um ambiente de produção, a sincronização de tarefas se torna crucial para garantir a integridade 
+dos dados compartilhados e evitar condições de corrida. Quando várias tarefas estão sendo executadas 
+simultaneamente, pode ocorrer uma situação em que duas ou mais tarefas tentam acessar ou modificar os 
+mesmos dados ao mesmo tempo. Isso pode levar a resultados inconsistentes ou inesperados, causando erros 
+ou comportamentos indesejados no sistema.
+Os semáforos e mutexes são exemplos comuns de mecanismos de sincronização usados para lidar com essas situações. 
+Um semáforo é uma variável que controla o acesso a um recurso compartilhado, permitindo que uma única tarefa o 
+utilize por vez. Ele é usado para evitar condições de corrida, onde múltiplas tarefas podem tentar acessar um recurso simultaneamente.
+Um mutex, por sua vez, é um mecanismo semelhante a um semáforo, mas com a diferença de que apenas a tarefa que bloqueou o mutex pode 
+desbloqueá-lo. Isso garante a exclusão mútua do recurso compartilhado, evitando conflitos de acesso.
+
+POR QUE NÃO FOI NECESSÁRIO USAR NESSE CASO: 
+A sincronização não foi necessária pois as tarefas são independentes e não compartilham nenhum recurso ou dado entre si.
+Cada tarefa está operando em sua própria área de memória exclusiva e não houver necessidade de troca ou compartilhamento 
+de informações, por isso a sincronização não foi necessária.
 
